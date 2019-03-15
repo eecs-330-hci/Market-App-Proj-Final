@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="add-preferences">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="opacity-wrapper">
+      <div class="order-heading">
+        <h1>Place an Order</h1>
+        <form class="home-icon-wrapper" action="/homepage" method="get">
+          <button class="btn btn-outline-primary" role="button" type="submit"><i class="fas fa-2x fa-home"></i></button>
+        </form>
+      </div>
+      <hr>
+      <div class="row">
+
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3"> Your cart
+            <!-- <span class="text-muted">Your cart</span> -->
+            <form action="/clearOrder" method="post">
+              <button class="btn btn-outline-primary" name="clearOrder">Empty Cart</button>
+            </form>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h5 class="my-0">Order from Evanston Farmers Markets:</h5>
+              </div>
+            </li>
+
+            <%cartItems.forEach(function(item) { %>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0"><%=item.name%> (<%=item.quantity%> lbs)</h6>
+                  <small class="text-muted"><%=item.detail%></small>
+                </div>
+                <span class="text-muted">$<%=item.price%>/lb</span>
+              </li>
+            <% }); %>
+
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$<strong class="total"><%=currentCart%></strong></strong>
+            </li>
+            <button class="btn btn-primary btn-lg btn-block order-button" type="submit" onclick="showOrder()">Order</button>
+
+          </ul>
+
+        </div>
+
+        <div class="col-md-8 order-md-1">
+          <div class="profile-address">
+            <h2>Evanston Farmers Market</h2>
+            <div class="profile-inline">
+              <div class="profile-inline-div">
+                <p>1800 Maple Avenue, Evanston, IL 60201</p>
+                <p>(847)-448-8045</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="search-for-foods">
+            <h3>Search for Items to Add</h3>
+            <p>Please select <em>only</em> items provided from your search.</p>
+            <form class="form-inline my-2 my-lg-0 search-order" action="/orderSearch" method="post">
+              <input class="form-control mr-sm-2 searchbar" type="search" name="query" placeholder="Search for foods ..." aria-label="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Add Food</button>
+            </form>
+            <div class="row search-margin">
+              <%searchOrderFoods.forEach(function(food) { %>
+                <div class="preference col-3">
+                  <div class="icon">
+                    <img src="images/preferences/<%=food.marker%>.png" id="<%=food.marker%>" alt="<%=food.marker%>">
+                  </div>
+                  <h6 class="order-food-name"><%=food.name%></h6>
+                  <form class="input-group featured-item" action="/change-food" method="post">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-danger subtract-button" type="submit" value="<%=food.name%>" name="delete"><strong>-</strong></button>
+                    </div>
+                    <input type="hidden" name="price" value="<%=food.price%>"></input>
+                    <div class="input-group-append">
+                      <span class="input-group-text">1 lb.</span>
+                      <button class="btn btn-outline-success add-button" type="submit" value="<%=food.name%>" name="add"><strong>+</strong></button>
+                    </div>
+                  </form>
+
+                  <hr>
+                  <h6>$<%=food.price%>/lb</h6>
+                </div>
+              <%});%>
+            </div>
+            <hr>
+          </div>
+          <div class="featured-foods">
+            <h3>Featured Foods</h3>
+            <p>Pick foods that this market features!</p>
+            <div class="profile-row">
+              <%features.forEach(function(feature) { %>
+                <div class="preference col-3">
+                  <div class="icon">
+                    <img src="images/preferences/<%=feature.marker%>.png" id="<%=feature.marker%>" alt="<%=feature.marker%>">
+                  </div>
+                  <h6 class="order-food-name"><%=feature.name%></h6>
+                  <form class="input-group featured-item" action="/change-food" method="post">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-danger subtract-button" type="submit" value="<%=feature.name%>" name="delete"><strong>-</strong></button>
+                    </div>
+                    <input type="hidden" name="price" value="<%=feature.price%>"></input>
+                    <div class="input-group-append">
+                      <span class="input-group-text">1 lb.</span>
+                      <button class="btn btn-outline-success add-button" type="submit" value="<%=feature.name%>" name="add"><strong>+</strong></button>
+                    </div>
+                  </form>
+
+                  <hr>
+                  <h6>$<%=feature.price%>/lb</h6>
+                </div>
+              <%});%>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+  <!-- Local Script -->
+  <script src="pages.js" charset="utf-8"></script>
+  <!-- Bootstrap 4.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

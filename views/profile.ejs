@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="add-preferences">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="opacity-wrapper">
+    <div class="profile-heading">
+      <h1>Market Profile</h1>
+      <form class="home-icon-wrapper" action="/homepage" method="get">
+        <button class="btn btn-outline-primary" role="button" type="submit"><i class="fas fa-2x fa-home"></i></button>
+      </form>
+    </div>
+
+    <div class="profile-address">
+      <h2>Evanston Farmers Market</h2>
+      <hr />
+      <div class="profile-inline">
+        <div class="profile-inline-div">
+          <p>1800 Maple Avenue, Evanston, IL 60201</p>
+          <p>(847)-448-8045</p>
+        </div>
+        <div class="profile-inline-div">
+          <form class="profile-button" action="/order" method="get">
+            <button type="submit" class="btn btn-primary">Order</button>
+          </form>
+          <div class="profile-button">
+            <a href="mailto:someone@example.com?Subject=Hello" target="_top" role="button" class="btn btn-outline-primary" name="profile-contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-information">
+      <h2>Featured Farmers</h2>
+      <hr />
+      <div class="profile-info-wrapper">
+
+        <div class="profile-info-div">
+          <img class="profile-image" src="images/profile/Image1.jpg" alt='Image of Market' align="right">
+          <p><b>Salman Johnson </b> &#8212;
+            Coming from St. Louis, Salmam Johnson's has been growing fruits and vegetables his whole life.
+            He comes from a long line of farmers and is said to have soil flowing through his veins.
+            Caring for and providing the best produce to his loyal customers, and he hopes to make you one of them.
+          </p>
+          <p><b>Joe Dugon</b> &#8212;
+            Born and raised in Kansas, Joe Dugon is Salmans best friend. He has dedicated his life
+            to raising and caring for livestock. With 30 years of knowledge under his belt, Dugon always
+            carries the highest quality produce. He always claims that the secret to his success stems from
+            the personal relationships he has with each of his animals, and lots of coffee.
+          </p>
+          <h2>Reviews</h2>
+          <span id="filled-star">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+          <p><b>Anonymous </b> &#8212;
+            The farmers here really care about what they're selling, amazing people and amazing produce!
+          </p>
+          <span id="filled-star">&#9733; &#9733; &#9733; &#9733;</span> <span id="empty-star">&#9734;</span>
+          <p><b>Souradip </b> &#8212;
+            I am a big fan of Salman's livestock. He always has the best stuff in town and he's always been a good friend.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="profile-featured-foods">
+      <h2>Featured Foods</h2>
+      <hr />
+      <div class="profile-row">
+        <div class="preference">
+          <div class="icon">
+            <img src="images/preferences/apple.png" alt="apple">
+          </div>
+          <div class="icon-caption">
+            apple
+          </div>
+        </div>
+        <div class="preference">
+          <div class="icon">
+            <img src="images/preferences/grapes.png" alt="grapes">
+          </div>
+          <div class="icon-caption">
+            grapes
+          </div>
+        </div>
+        <div class="preference">
+          <div class="icon">
+            <img src="images/preferences/beef.png" alt="beef">
+          </div>
+          <div class="icon-caption">
+            beef
+          </div>
+        </div>
+        <div class="preference">
+          <div class="icon">
+            <img src="images/preferences/cheese.png" alt="cheese">
+          </div>
+          <div class="icon-caption">
+            cheese
+          </div>
+        </div>
+        <div class="preference">
+          <div class="icon">
+            <img src="images/preferences/ice-cream.png" alt="ice-cream">
+          </div>
+          <div class="icon-caption">
+            ice-cream
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="location-map">
+      <iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=KEY=Evanston+Farmers+Market,Evanston+IL" allowfullscreen>
+      <!-- Api key removed -->
+      </iframe>
+      <hr>
+    </div>
+  </div>
+
+  <%- include("partials/footer"); -%>

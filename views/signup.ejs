@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="add-preferences">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="opacity-wrapper">
+    <a href="/"><i class="fas fa-lg fa-arrow-left back-arrow"></i></a>
+    <div class="create-heading">
+      <h1>Sign Up</h1>
+    </div>
+    <div class="signup-form">
+      <hr>
+      <form class="form-signup" action="/signup" method="post">
+        <div class="row">
+          <div class="col-6 signup-block">
+            <div class="entry">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First name" required>
+            </div>
+            <div class="entry">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" required>
+            </div>
+            <div class="entry">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="telephone" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+            </div>
+            <div class="entry">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="Address" required>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" class="form-control" placeholder="State" required>
+              </div>
+              <div class="col-6">
+                <label for="zipCode">Zip Code</label>
+                <input type="text" id="zipCode" name="zipCode" class="form-control" placeholder="Zip Code" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 signup-block user-block">
+            <div>
+              <div class="entry">
+                <label for="inputEmail">Email</label>
+                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required>
+              </div>
+              <div class="entry">
+                <label for="password">Password</label>
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
+              </div>
+              <button class="btn btn-primary btn-block home-button" type="submit" role="button" name="continue">Continue</button>
+              <hr>
+              <div class="user-note">
+                <p><strong>NOTE: </strong> Your user name will be your <strong>email address.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <div class="extra-options">
+        <h6>Already have an account? <a href="/login">Log In</a></h6>
+      </div>
+    </div>
+  </div>
+
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,470 @@
+.home {
+  background-color: #E4E9FD;
+  background-image: url("../images/home/ag.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.create {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(112deg, #9EE493 50%, #f5f5f5 50%);
+  min-height: 150vh;
+  overflow: hidden;
+}
+
+.add-preferences {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(112deg, #9EE493 50%, #f5f5f5 50%);
+  min-height: 100vh;
+}
+
+body {
+  background: none;
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+  font-size: 4rem;
+}
+
+.logo-heading {
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  margin: 15% 0 0%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo-heading h1 {
+  font-size: 10rem;
+}
+
+.home-options {
+  width: 22%;
+  margin: 5% auto auto;
+  text-align: center;
+}
+
+.signup-wraper, .login-wrapper {
+  margin: 10% 0;
+}
+
+.login, .signup {
+  outline: 0;
+}
+
+/* .signup-block {
+  margin: 0%;
+} */
+
+.form-signup {
+  margin-bottom: 4%;
+}
+
+.extra-options {
+  text-align: center;
+}
+
+.login-form {
+  width: 28%;
+  margin: auto;
+}
+
+.signup-form {
+  width: 60%;
+  margin: auto;
+}
+
+.signup-form .entry, .login-form .entry {
+  margin: 20px 0;
+}
+
+.signup-form .entry:first-child, .login-form .entry:first-child {
+  margin-top: 10px;
+}
+
+.signup-form .entry:last-child, .login-form .entry:last-child {
+  margin-bottom: 25px;
+}
+
+.signup-form input, .login-form input {
+  box-shadow: 5px 5px 8px -5px rgba(0, 0, 0, 0.3);
+}
+
+.signup-form input:focus, .login-form input:focus {
+  outline: none;
+}
+
+.user-note {
+  text-align: center;
+}
+
+/* Payment info page */
+.payment-options {
+  width: 50%;
+  margin: 5% auto auto;
+  text-align: center;
+}
+
+.card-info {
+  margin: auto;
+  width: 40%;
+}
+
+.continue-button {
+  text-align: center;
+}
+
+.create-heading {
+  text-align: center;
+}
+
+/* Preferences page */
+
+.profile-image {
+  width: 50%;
+  float: right;
+}
+
+.profile-info-text {
+  padding-left: 100px;
+}
+
+.profile-info-wrapper{
+  display: flex;
+}
+.profile-address p{
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.profile-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-button {
+  padding-bottom: 15px;
+}
+
+.profile-button button {
+  width: 100%;
+}
+
+#filled-star {
+  color: gold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#empty-star {
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+/* .preferences-wrapper, .profile-wrapper, .home-wrapper, .order-wrapper {
+  width: 80%;
+  margin: auto;
+} */
+
+.opacity-wrapper {
+  width: 90vw;
+  height: auto;
+  margin: 10vh auto;
+  padding: 4%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* border: 7px solid rgba(255, 255, 255, 0.7); */
+  border-radius: 10px;
+}
+
+.preferences-row, .profile-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.preferences-heading {
+  margin-bottom: 4%;
+}
+
+.icon {
+  padding: 10px;
+  margin-bottom: 6px;
+  /* text-align: center; */
+  display: flex;
+  align-items: middle;
+  justify-content: center;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.preference-check {
+  margin: 0 10%;
+}
+
+.finish {
+  text-align: right;
+  /* margin-bottom: 5%;
+  padding-bottom: 5%; */
+}
+/*---------------------------------------------------*/
+.home-heading {
+  text-align: left;
+  /* margin-left: 20px;
+  padding: 20px; */
+  font-size: 18px;
+  margin-bottom: 5%;
+}
+
+#title {
+  font-size: 4rem;
+}
+
+.home-body {
+  text-align: left;
+  /* margin-left: 20px;
+  padding: 20px; */
+  /* font-size: 18px; */
+}
+/*
+.home-body h3 {
+  margin-top: 25px;
+} */
+
+.box {
+  float: left;
+  width: 22.5%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* .icon img {
+  position: relative;
+  left: 5px;
+} */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.info {
+  margin-top: 15px;
+  position: relative;
+  left: -100px;
+}
+
+.learn-more {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  margin-right: 470px;
+}
+
+.learn-more:hover {
+  background-color: green;
+}
+
+.suggested-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.suggested-market{
+  /* display: inline;
+  float: left; */
+  transition: all 0.3s ease;
+}
+
+.market-picture{
+  width: 350px;
+  height: auto;
+  /* padding-right: 30px */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.caption {
+  color: green;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.caption-link {
+  color: #003366;
+  text-align: center;
+}
+
+.icon-caption {
+  text-align: center;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+  margin: auto;
+}
+
+.market-picture-wrapper {
+  padding: 10px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.market-picture-wrapper:hover, .home-food:hover {
+  background: rgba(50, 205, 50, 0.5);
+}
+
+/* .preferences-wrapper {
+  padding: 0 3%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+.heading-and-search, .profile-heading, .results-heading, .order-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heading-and-search {
+  align-items:center;
+}
+
+
+.preference h6 {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.item-name {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.order-button {
+  margin-top: 5%;
+}
+
+.search-order {
+  margin-top: 5%;
+}
+
+.order-weight-input {
+  width: 20px;
+}
+
+.add-button {
+  margin-left: 5px!important;
+}
+
+.subtract-button {
+  margin-right: 5px;
+}
+
+.add-food {
+  margin: 0 5%;
+}
+
+.featured-item {
+  justify-content: center;
+}
+
+.food-search-wrapper {
+  margin-bottom: 5%;
+}
+
+.food-search-result {
+  margin: 0 3%;
+}
+
+.food-search-result:first-child {
+  margin-left: 0;
+}
+
+.food-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-arrow {
+  position: relative;
+  top: -30px;
+  left: -2%;
+}
+
+/* .home-icon {
+  position: relative;
+  right: -2%;
+} */
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.home-icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* .profile-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.recipe-title {
+  margin-top: 2%;
+}
+
+/* .list-group-item {
+  background: none;
+} */
+
+.preference.col-3 {
+  margin: 3% 0;
+}
+
+.recipe-description {
+  margin: 2% 0;
+  font-size: 1.2rem;
+}
+
+.recipe-section {
+  margin-bottom: 2%;
+}
+
+.results button {
+  margin: 0 3px;
+}

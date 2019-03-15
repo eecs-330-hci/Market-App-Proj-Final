@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="add-preferences">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="opacity-wrapper">
+    <div class="food-search-wrapper">
+      <div class="results-heading">
+        <h1>Search Results</h1>
+        <form class="home-icon-wrapper" action="/homepage" method="get">
+          <button class="btn btn-outline-primary" role="button" type="submit"><i class="fas fa-2x fa-home"></i></button>
+        </form>
+      </div>
+      <hr>
+      <div class="row">
+        <p><%=noResults%></p>
+        <%searchResults.forEach(function(result) { %>
+          <div class="food-search-result col-2">
+            <div class="food-info">
+              <div class="food-text">
+                <h3><%=result.name%></h3>
+                <h6>Price: $ <%=result.price%>/lb</6>
+              </div>
+              <div class="food-image">
+                <img src="../images/preferences/<%=result.marker%>.png" alt="<%=result.marker%>">
+              </div>
+            </div>
+            <hr>
+            <div class="food-options">
+              <p>Find recipes or order!</p>
+              <div class="btn-group results" role="group">
+                <form action="/order" method="get">
+                  <button type="submit" class="btn btn-success">Order</button>
+                </form>
+                <form action="/getRecipe" method="post">
+                  <button type="submit" class="btn btn-outline-success" value="<%=result.name%>" name="recipeButton">Recipes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+
+
+      </div>
+    </div>
+    <h1>Similar Foods</h1>
+    <hr>
+    <div class="similar-foods-wrapper">
+      <div class="row">
+        <p><%=noResults%></p>
+        <%similarFoods.forEach(function(food) { %>
+          <div class="food-search-result col-2">
+            <div class="food-info">
+              <div class="food-text">
+                <h3><%=food.name%></h3>
+                <h6>Price: $ <%=food.price%>/lb</6>
+              </div>
+              <div class="food-image">
+                <img src="../images/preferences/<%=food.marker%>.png" alt="<%=food.marker%>">
+              </div>
+            </div>
+            <hr>
+            <div class="food-options">
+              <p>Find recipes or order!</p>
+              <div class="btn-group results" role="group">
+                <form action="/order" method="get">
+                  <button type="submit" class="btn btn-success">Order</button>
+                </form>
+                <form action="/getRecipe" method="post">
+                  <button type="submit" class="btn btn-outline-success" value="<%=food.name%>" name="recipeButton">Recipes</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+  <!-- Local Script -->
+  <script src="pages.js" charset="utf-8"></script>
+  <!-- Bootstrap 4.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

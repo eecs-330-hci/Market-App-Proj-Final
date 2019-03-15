@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="add-preferences">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <form class="opacity-wrapper" action="/preferences" method="post">
+    <div class="preferences-heading">
+      <h1>Welcome,
+        <%=firstName%>!</h1>
+      <h3>Add your preferences &#8212; Pick at least <strong>5</strong> foods that you're interested in!</h2>
+    </div>
+    <div class="fruits">
+      <h3>Fruits</h3>
+      <hr>
+
+      <div class="preferences-row">
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/apple.png" alt="apple">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="apple" value="apple">
+            <label class="form-check-label" for="apple">apple</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/orange.png" alt="orange">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="orange" value="orange">
+            <label class="form-check-label" for="orange">orange</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/banana.png" alt="banana">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="banana" value="banana">
+            <label class="form-check-label" for="banana">banana</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/grapes.png" alt="grapes">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="grapes" value="grapes">
+            <label class="form-check-label" for="grapes">grapes</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/strawberry.png" alt="strawberry">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="strawberry" value="strawberry">
+            <label class="form-check-label" for="strawberry">strawberries</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="vegetables">
+      <h3>Vegetables</h3>
+      <hr>
+
+      <div class="preferences-row">
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/potatoes.png" alt="potatoes">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="potatoes" value="potatoes">
+            <label class="form-check-label" for="potatoes">potatoes</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/carrot.png" alt="carrot">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="carrot" value="carrot">
+            <label class="form-check-label" for="carrot">carrot</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/lettuce.png" alt="lettuce">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="lettuce" value="lettuce">
+            <label class="form-check-label" for="lettuce">lettuce</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/broccoli.png" alt="broccoli">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="broccoli" value="broccoli">
+            <label class="form-check-label" for="broccoli">broccoli</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/onion.png" alt="onion">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="onion" value="onion">
+            <label class="form-check-label" for="onion">onion</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="protein">
+      <h3>Protein</h3>
+      <hr>
+
+      <div class="preferences-row">
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/egg.png" alt="egg">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="egg" value="egg">
+            <label class="form-check-label" for="egg">egg</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/beans.png" alt="beans">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="beans" value="beans">
+            <label class="form-check-label" for="beans">beans</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/chicken.png" alt="chicken">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="chicken" value="chicken">
+            <label class="form-check-label" for="chicken">chicken</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/beef.png" alt="beef">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="beef" value="beef">
+            <label class="form-check-label" for="beef">beef</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/turkey.png" alt="turkey">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="turkey" value="turkey">
+            <label class="form-check-label" for="turkey">turkey</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dairy">
+      <h3>Dairy</h3>
+      <hr>
+
+      <div class="preferences-row">
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/milk.png" alt="milk">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="milk" value="milk">
+            <label class="form-check-label" for="milk">milk</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/cheese.png" alt="cheese">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="cheese" value="cheese">
+            <label class="form-check-label" for="cheese">cheese</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/yogurt.png" alt="yogurt">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="yogurt" value="yogurt">
+            <label class="form-check-label" for="yogurt">yogurt</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/ice-cream.png" alt="ice-cream">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="ice-cream" value="ice-cream">
+            <label class="form-check-label" for="ice-cream">ice-cream</label>
+          </div>
+        </div>
+
+        <div class="preference">
+          <div class="icon">
+            <img src="../images/preferences/butter.png" alt="butter">
+          </div>
+          <div class="form-check form-check-inline preference-check">
+            <input class="form-check-input" name="foods" type="checkbox" id="butter" value="butter">
+            <label class="form-check-label" for="butter">butter</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="finish">
+      <button type="submit" class="btn btn-primary btn-lg" name="finishButton">Finish</button>
+    </div>
+
+
+  </form>
+
+  <%- include("partials/footer"); -%>
