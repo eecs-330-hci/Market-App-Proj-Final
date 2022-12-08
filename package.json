@@ -12,10 +12,10 @@
     "node": "10.14.2"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mongoose": "^5.4.19",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
